@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("B4.jpg") no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.8; /* Optional: Adjust transparency */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(218, 186, 189);
+    color: rgb(38, 42, 42);
+    height: 60px;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li{
+    text-decoration: none;
+    color: rgb(38, 42, 42);
+    font-size: 20px;
+    font-family:"Dancing Script", cursive;
+}
+.gamecontainer {
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    gap: 5px; /* Added to separate boxes slightly */
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: crosshair;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(86, 76, 92); /* Applied purple color inside the play boxes */
+    color: white; /* Ensures text is readable */
+    transition: background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: rgb(68, 54, 77); /* Darker shade for hover effect */
+}
+
+.imginfo img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+#reset {
+    margin: 10px;
+    padding: 1vw 2vw;
+    background-color: rgb(222, 214, 229);
+    border-radius: 25%;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#reset:hover {
+    background-color: rgb(200, 190, 210);
+}
